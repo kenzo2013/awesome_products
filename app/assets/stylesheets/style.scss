@@ -52,6 +52,8 @@ a:hover{
   text-align: center;
 }
 
+//Flash message
+
 .flash_message{
   position: relative;
   top: 94px;
@@ -63,16 +65,4 @@ a:hover{
 
 .alert-notice {
   @extend .alert-success;
-}
-
-.main {
-  position: relative;
-  top: 150px;
-}
-.title{
-  text-align: center;
-}
-.products{
-  position: relative;
-  top: 67px;
 }
