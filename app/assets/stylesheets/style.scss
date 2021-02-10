@@ -1,0 +1,25 @@
+
+body {
+
+  background-color: #EDEDED;
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+}
+a {
+  color: #00BFFF !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover{
+  color: #808080 !important;
+}
+
+// Navbar
+.bg-light {
+  background-color: white !important;
+  height: 8%;
+}
+
+.card-footer {
+  background-color: white;
+}
