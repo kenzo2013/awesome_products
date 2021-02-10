@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
   before_action :set_product, only: [:show]
   def index
-    @products = Product.includes(:attachments)
+    @products = Product.all
   end
 
   def show

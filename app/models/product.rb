@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :attachments
 
 
-  validates_presence_of :name, :description, :attachments
+  validates_presence_of :name, :description
 
   def files=(array_of_files = [])
     array_of_files.each do |f|
