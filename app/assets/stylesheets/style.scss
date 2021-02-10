@@ -51,3 +51,16 @@ a:hover{
 .actions{
   text-align: center;
 }
+
+.flash_message{
+  position: relative;
+  top: 94px;
+  text-align: center;
+}
+.alert-alert {
+  @extend .alert-danger;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
