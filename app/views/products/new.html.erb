@@ -1,17 +1,28 @@
-<%= simple_form_for(@product) do |f| %>
-	<div class="field">
-		<%= f.input :name, label: 'Name' %>
+<div class="col-md-6 offset-md-3">
+	<div class="row shadow p-3 mb-5 bg-white rounded main">
+		<div class="row header">
+			<h2> Add product</h2>
+		</div>
+		<div class="row">
+			<%= simple_form_for(@product) do |f| %>
+				<div class="field">
+					<%= f.input :name, placeholder: 'Name', label: false %>
+				</div>
+				<div class="field">
+					<%= f.input :description, as: :text, placeholder: 'Description', label: false, :input_html => { class: 'test', :cols => 5, :rows => 5 } %>
+				</div>
+				<div class="field">
+					<%= f.input :files, as: :file, label: false, input_html: { :multiple => true } %>
+				</div>
+				<div class="col-md-4 offset-md-4">
+					<div class="actions">
+						<%= f.button :submit, "Submit", class: "btn btn-primary"%>
+					</div>
+				</div>
+				
+			<% end %>
+		</div>
 	</div>
-	<div class="field">
-		<%= f.input :description, label: 'Description' %>
-	</div>
-	
-	<div class="field">
-		<%= f.input :files, as: :file, input_html: { :multiple => true } %>
-	</div>
-	
-	
-	<div class="actions">
-		<%= f.submit %>
-	</div>
-<% end %>
+</div>
+
+

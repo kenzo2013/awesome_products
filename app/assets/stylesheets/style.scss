@@ -23,3 +23,31 @@ a:hover{
 .card-footer {
   background-color: white;
 }
+//Form
+.main {
+  position: relative;
+  top: 130px;
+}
+
+.header
+{
+  text-align: center;
+  color: #00BFFF;
+}
+.form-group
+{
+  padding: 10px;
+}
+.btn-primary {
+  background-color: #00BFFF;
+  border-color: #00bfff;
+  width: 50%;
+}
+
+.btn-primary:hover {
+  background-color: #00aeff;
+  border-color: #00aeff;
+}
+.actions{
+  text-align: center;
+}
