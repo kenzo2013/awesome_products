@@ -7,7 +7,7 @@
 		<div class="card">
 			<%= image_tag(product.attachments.first.image.url(:medium), class: "card-img-top", alt: "Card image cap") %>
 			<div class="card-body">
-				<h5 class="card-title"><%= link_to product.name, product_path(product) %></h5>
+				<h5 class="card-title"><%= link_to format_name(product.name), product_path(product) %></h5>
 				<p class="card-text"><%= product.description.truncate(100) %></p>
 			</div>
 			<div class="card-footer">

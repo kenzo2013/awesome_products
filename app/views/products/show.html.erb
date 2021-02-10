@@ -1,2 +1,37 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h3> Product details</h3>
+
+<h5> <%= format_name(@product.name) %> </h5>
+
+<div class="row">
+	<div class="col-md-5">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<ol class="carousel-indicators">
+				<% @product.attachments.each.with_index(0) do |image, index| %>
+					<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= index %>" class="<%= index.zero? ? 'active' : '' %>"></li>
+				<% end %>
+			</ol>
+			
+			<div class="carousel-inner">
+				<% @product.attachments.each.with_index(0) do |image, index| %>
+					<div class="carousel-item <%= index.zero? ? 'active' : '' %>">
+						<%= image_tag image.image.url(:large) %>
+					</div>
+				<% end %>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</a>
+		</div>
+	</div>
+	<div class="col-md-7">
+		<%= @product.description %>
+	</div>
+</div>
+
+
+

@@ -7,15 +7,15 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ms-auto">
 				<li class="nav-item">
-					<%= link_to 'Ajouter un produit', new_product_path, class: "nav-link active", "aria-current": "page" %>
+					<%= link_to 'Add product', new_product_path, class: "nav-link active", "aria-current": "page" %>
 				</li>
 				<% if user_signed_in? %>
 					<li class="nav-item">
-						<%= link_to("Déconnexion", destroy_user_session_path, method: :delete, class: "nav-link active", "aria-current": "page" ) %>
+						<%= link_to("Logout", destroy_user_session_path, method: :delete, class: "nav-link active", "aria-current": "page" ) %>
 					</li>
 				<% else %>
 					<li class="nav-item">
-						<%= link_to('Connexion', new_user_session_path, class: "nav-link active", "aria-current": "page" ) %>
+						<%= link_to('Login', new_user_session_path, class: "nav-link active", "aria-current": "page" ) %>
 					</li>
 				<% end %>
 			</ul>
