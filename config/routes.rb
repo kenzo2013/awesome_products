@@ -7,4 +7,7 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'users/sessions#new'
     get 'sign_up', to: 'users/registrations#new'
   end
+
+  root 'products#index'
+  resources :products, only: [:index, :new, :show, :create]
 end
