@@ -61,3 +61,5 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'jquery-rails'
 
 gem 'devise'
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
