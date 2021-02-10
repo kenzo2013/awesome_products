@@ -24,7 +24,7 @@ a:hover{
   background-color: white;
 }
 //Form
-.main {
+.main_form {
   position: relative;
   top: 130px;
 }
@@ -63,4 +63,16 @@ a:hover{
 
 .alert-notice {
   @extend .alert-success;
+}
+
+.main {
+  position: relative;
+  top: 150px;
+}
+.title{
+  text-align: center;
+}
+.products{
+  position: relative;
+  top: 67px;
 }
